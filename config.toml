@@ -4,3 +4,4 @@ title = "Buffer Developers"
 publishDir = "docs"
 [params]
   showDate = false
+  UseIcon = true
