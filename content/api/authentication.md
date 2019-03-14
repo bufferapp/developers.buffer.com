@@ -66,4 +66,4 @@ The implementation is based on [version 20 of the IETF draft](http://tools.ietf.
 
 ### Deauthorizing your client
 
-To deauthorize your client, see [/user/deauthorize](/developers/api/user#deauthorize).
+To deauthorize your client, see [/user/deauthorize](/api/user#post-user-deauthorize).
