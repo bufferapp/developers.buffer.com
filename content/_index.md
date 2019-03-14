@@ -4,7 +4,7 @@ menu = "main"
 weight = 1
 +++
 
-We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our [Change Logs page](/api/logs) for more details!
+> We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our [Changelog page](/api/logs) for more details!
 
 The Buffer API provides access to [user](/api/user)'s pending and sent [updates](/api/updates), social media [profiles](/api/profiles), [scheduled times](/api/profiles#schedules) and more.
 

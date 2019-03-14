@@ -39,6 +39,7 @@ Your app should swap the authorization code for an access token by `POST`ing it 
 
 #### Example Request
 
+```
 POST https://api.bufferapp.com/1/oauth2/token.json
 
 POST Data
@@ -47,6 +48,7 @@ POST Data
      redirect_uri=...&
      code=...&
      grant_type=authorization_code
+```
 
 If your request is successful we will return a long-lived access token which can be used to access the users account details for all further api requests.
 

@@ -8,6 +8,11 @@ a, a:visited {
   color: #324cfe;
 }
 
+blockquote {
+  border-color: #efbf47;
+  background: #ffdc84;
+}
+
 /* Always show sidebar */
 .off-canvas.off-canvas-sidebar-show .off-canvas-sidebar {
   -ms-flex: 0 0 auto;

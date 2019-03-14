@@ -28,7 +28,7 @@ Getting Started All of the Buffer API endpoints require authentication. To get a
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="/assets/style.css?v=1552531597">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531871">
   </head>
 
 
@@ -149,14 +149,15 @@ Getting Started All of the Buffer API endpoints require authentication. To get a
 
 <h4 id="example-request-1">Example Request</h4>
 
-<p>POST <a href="https://api.bufferapp.com/1/oauth2/token.json">https://api.bufferapp.com/1/oauth2/token.json</a></p>
+<pre><code>POST https://api.bufferapp.com/1/oauth2/token.json
 
-<p>POST Data
-     client_id=&hellip;&amp;
-     client_secret=&hellip;&amp;
-     redirect_uri=&hellip;&amp;
-     code=&hellip;&amp;
-     grant_type=authorization_code</p>
+POST Data
+     client_id=...&amp;
+     client_secret=...&amp;
+     redirect_uri=...&amp;
+     code=...&amp;
+     grant_type=authorization_code
+</code></pre>
 
 <p>If your request is successful we will return a long-lived access token which can be used to access the users account details for all further api requests.</p>
 
