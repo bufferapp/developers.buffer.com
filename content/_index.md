@@ -4,11 +4,11 @@ menu = "main"
 weight = 1
 +++
 
-We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our [Change Logs page](/developers/api/logs) for more details!
+We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our [Change Logs page](/api/logs) for more details!
 
-The Buffer API provides access to [user](/developers/api/user)'s pending and sent [updates](/developers/api/updates), social media [profiles](/developers/api/profiles), [scheduled times](/developers/api/profiles#schedules) and more.
+The Buffer API provides access to [user](/api/user)'s pending and sent [updates](/api/updates), social media [profiles](/api/profiles), [scheduled times](/api/profiles#schedules) and more.
 
-To get started, [create an app](/developers/apps/create) and [get an access token](/developers/api/oauth) for a user.
+To get started, [create an app](/developers/apps/create) and [get an access token](/api/authentication) for a user.
 
 ### Endpoints
 
