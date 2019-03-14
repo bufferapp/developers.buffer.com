@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  Authentication &ndash; Buffer API
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="Authentication with Buffer is the first step in building your app.
+Buffer is an OAuth 2.0 provider. We recommend using one of the many great OAuth 2.0 libraries to do the heavy lifting!
+Getting Started All of the Buffer API endpoints require authentication. To get an access_token you must first register an application here. Once you have registered an app follow the steps below to gain authorized access to a users account.|">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Buffer API">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531002">
+  </head>
+
+
+  <body>
+    <div class="off-canvas off-canvas-sidebar-show">
+
+      <div class="docs-sidebar off-canvas-sidebar">
+        <a class="docs-brand" href="https://developers.buffer.com/">
+  <h1 class="docs-brand-title">
+    Buffer API
+  </h1>
+  <small class="label text-bold">API DOCS</small>
+</a>
+
+        <nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        
+        
+          
+            <li class="menu-item">
+              <a href="/">
+                
+                <span>Overview</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/authentication/">
+                
+                <span>Authentication</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/user/">
+                
+                <span>Users</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/profiles/">
+                
+                <span>Profiles</span>
+              </a>
+            </li>
+          
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+
+      <div role="main" class="docs-content off-canvas-content">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">Authentication</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+
+  </div>
+</div>
+<article>
+  <section class="">
+    
+
+<p>Authentication with Buffer is the first step in building your app.</p>
+
+<p>Buffer is an OAuth 2.0 provider. We recommend using one of the many great OAuth 2.0 libraries to do the heavy lifting!</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>All of the Buffer API endpoints require authentication. To get an <code>access_token</code> you must first <a href="/developers/apps/create">register an application here</a>. Once you have registered an app follow the steps below to gain authorized access to a users account.</p>
+
+<p>Please note: <strong>a good OAuth library will handle most of these steps for you.</strong> You should only need to supply a client ID and secret.</p>
+
+<h3 id="redirect-your-users-for-authorization">Redirect Your Users for Authorization</h3>
+
+<p>First, redirect your user to the authorize endpoint. Note, the <code>redirect_uri</code> must match the Callback URL given when your app was registered.</p>
+
+<h4 id="example-request">Example Request</h4>
+
+<pre><code>GET https://bufferapp.com/oauth2/authorize?
+    client_id=...&amp;
+    redirect_uri=...&amp;
+    response_type=code
+</code></pre>
+
+<p>The user will then approve or deny the request to authorize your application. At this point they will be redirected back to the redirect_uri location with an authorization code or error message as a query parameter. This should look something like:</p>
+
+<p><code>http://example.com/back?code=1/mWot20jTwojsd00jFlaaR45</code></p>
+
+<h3 id="getting-an-access-token">Getting an Access Token</h3>
+
+<p>Note: If you only need a single access token, we will automatically generate that for you after you have <a href="/developers/apps/create">created an app.</a></p>
+
+<p>Your app should swap the authorization code for an access token by <code>POST</code>ing it along with your <code>client_id</code>, <code>client_secret</code>, <code>redirect_uri</code> and <code>grant_type=authorization_code</code> to our token endpoint. <strong>Note, a code is valid for 30 seconds only</strong> - this swap should be performed as soon as the code is received. Also note that the code parameter must not be url encoded - ie. it should be formatted like <code>1/mWot20jTwojsd00jFlaaR45</code> and not <code>1%2FmWot20jTwojsd00jFlaaR45</code>.</p>
+
+<h4 id="example-request-1">Example Request</h4>
+
+<p>POST <a href="https://api.bufferapp.com/1/oauth2/token.json">https://api.bufferapp.com/1/oauth2/token.json</a></p>
+
+<p>POST Data
+     client_id=&hellip;&amp;
+     client_secret=&hellip;&amp;
+     redirect_uri=&hellip;&amp;
+     code=&hellip;&amp;
+     grant_type=authorization_code</p>
+
+<p>If your request is successful we will return a long-lived access token which can be used to access the users account details for all further api requests.</p>
+
+<h3 id="using-the-token">Using The Token</h3>
+
+<p>All requests to the Buffer API must be made using HTTPS, with the access token provided in the HTTP Authorization header, request body or query string. For example, using the query string:</p>
+
+<h4 id="example-request-2">Example Request</h4>
+
+<p><code>GET https://api.bufferapp.com/1/profiles.json?access_token=...</code></p>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>The implementation is based on <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-20">version 20 of the IETF draft</a>.</p>
+
+<h3 id="deauthorizing-your-client">Deauthorizing your client</h3>
+
+<p>To deauthorize your client, see <a href="/developers/api/user#deauthorize">/user/deauthorize</a>.</p>
+
+  </section>
+</article>
+
+        <div class="">
+          
+
+  <span class="text-small text-gray">
+    
+  </span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="generator" content="Hugo 0.54.0" />
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  Overview &ndash; Buffer API
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Buffer API">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531002">
+  </head>
+
+
+  <body>
+    <div class="off-canvas off-canvas-sidebar-show">
+
+      <div class="docs-sidebar off-canvas-sidebar">
+        <a class="docs-brand" href="https://developers.buffer.com/">
+  <h1 class="docs-brand-title">
+    Buffer API
+  </h1>
+  <small class="label text-bold">API DOCS</small>
+</a>
+
+        <nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        
+        
+          
+            <li class="menu-item">
+              <a href="/">
+                
+                <span>Overview</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/authentication/">
+                
+                <span>Authentication</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/user/">
+                
+                <span>Users</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/profiles/">
+                
+                <span>Profiles</span>
+              </a>
+            </li>
+          
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+
+      <div role="main" class="docs-content off-canvas-content">
+        
+
+<div>
+
+  <h1>Overview</h1>
+  
+
+<p>We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our <a href="/developers/api/logs">Change Logs page</a> for more details!</p>
+
+<p>The Buffer API provides access to <a href="/developers/api/user">user</a>&rsquo;s pending and sent <a href="/developers/api/updates">updates</a>, social media <a href="/developers/api/profiles">profiles</a>, <a href="/developers/api/profiles#schedules">scheduled times</a> and more.</p>
+
+<p>To get started, <a href="/developers/apps/create">create an app</a> and <a href="/developers/api/oauth">get an access token</a> for a user.</p>
+
+<h3 id="endpoints">Endpoints</h3>
+
+<p>All currently available endpoints are listed in this documentation. If you have ideas for further things you would like to see in the Buffer API, please contact <a href="mailto:hello@buffer.com">hello@buffer.com</a> - we might build them!</p>
+
+<p>But be sure to set the HTTP Content-Type header to <code>&quot;application/x-www-form-urlencoded&quot;</code> for your requests if you are writing your own client.</p>
+
+<h3 id="rate-limits">Rate Limits</h3>
+
+<p>The Buffer API is rate limited to 60 authenticated requests per user per minute. If you make more than 60 requests within a 60 seconds window period, you will receive a HTTP code 429 response.</p>
+
+<p>If you have a need for a higher rate limit, please get in touch so that we can try and help out.</p>
+
+<h3 id="response-formats">Response Formats</h3>
+
+<p>All requests to the Buffer API must end with the desired response format. Currently the only available response format is JSON and responses are of type application/json.</p>
+
+<p>For well formatted JSON output, add <code>&amp;pretty=true</code> to any request. Very useful for testing in the browser!</p>
+
+<h4 id="example-request">Example Request</h4>
+
+<p><code>GET https://api.bufferapp.com/1/profiles.json?pretty=true</code></p>
+
+<h3 id="questions-problems">Questions &amp; Problems</h3>
+
+<p>If you have any issues using the Buffer API you can contact us by emailing <a href="mailto:hello@buffer.com">hello@buffer.com</a> or give us a shout over on twitter <a href="http://twitter.com/buffer">@buffer</a> - we&rsquo;ll get back to you fast!</p>
+
+
+  
+
+
+</div>
+
+
+        <div class="">
+          
+
+  <span class="text-small text-gray">
+    
+  </span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

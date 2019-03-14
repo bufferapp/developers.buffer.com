@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  Users &ndash; Buffer API
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content=" A user represents a single Buffer user account.
+Get /user
+Post /user/deauthorize
+GET /user Returns a single user.
+Example Request GET https://api.bufferapp.com/1/user.json { &amp;quot;_id&amp;quot;:&amp;quot;4f0c0a06512f7ef214000000&amp;quot;, &amp;quot;activity_at&amp;quot;:1343654640, &amp;quot;created_at&amp;quot;:1326189062, &amp;quot;id&amp;quot;:&amp;quot;4f0c0a06512f7ef214000000&amp;quot;, &amp;quot;plan&amp;quot;:&amp;quot;free&amp;quot;, &amp;quot;timezone&amp;quot;:&amp;quot;Asia/Tel_Aviv&amp;quot; }  POST /user/deauthorize Deauthorize your client for the user.
+Example Request POST https://api.bufferapp.com/1/user/deauthorize.json { &amp;quot;success&amp;quot;: true, &amp;quot;message&amp;quot;: &amp;quot;Access successfully revoked!&amp;quot; }  |">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Buffer API">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531002">
+  </head>
+
+
+  <body>
+    <div class="off-canvas off-canvas-sidebar-show">
+
+      <div class="docs-sidebar off-canvas-sidebar">
+        <a class="docs-brand" href="https://developers.buffer.com/">
+  <h1 class="docs-brand-title">
+    Buffer API
+  </h1>
+  <small class="label text-bold">API DOCS</small>
+</a>
+
+        <nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        
+        
+          
+            <li class="menu-item">
+              <a href="/">
+                
+                <span>Overview</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/authentication/">
+                
+                <span>Authentication</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/user/">
+                
+                <span>Users</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/profiles/">
+                
+                <span>Profiles</span>
+              </a>
+            </li>
+          
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+
+      <div role="main" class="docs-content off-canvas-content">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">Users</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+
+  </div>
+</div>
+<article>
+  <section class="">
+    
+
+<p>A user represents a single Buffer user account.</p>
+
+<h3 id="get">Get</h3>
+
+<p><a href="#get-user">/user</a></p>
+
+<h3 id="post">Post</h3>
+
+<p><a href="#post-user-deauthorize">/user/deauthorize</a></p>
+
+<h3 id="get-user">GET /user</h3>
+
+<p>Returns a single user.</p>
+
+<h4 id="example-request">Example Request</h4>
+
+<pre><code>GET https://api.bufferapp.com/1/user.json
+
+{
+  &quot;_id&quot;:&quot;4f0c0a06512f7ef214000000&quot;,
+  &quot;activity_at&quot;:1343654640,
+  &quot;created_at&quot;:1326189062,
+  &quot;id&quot;:&quot;4f0c0a06512f7ef214000000&quot;,
+  &quot;plan&quot;:&quot;free&quot;,
+  &quot;timezone&quot;:&quot;Asia/Tel_Aviv&quot;
+}
+</code></pre>
+
+<h3 id="post-user-deauthorize">POST /user/deauthorize</h3>
+
+<p>Deauthorize your client for the user.</p>
+
+<h4 id="example-request-1">Example Request</h4>
+
+<pre><code>POST https://api.bufferapp.com/1/user/deauthorize.json
+
+{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Access successfully revoked!&quot;
+}
+</code></pre>
+
+  </section>
+</article>
+
+        <div class="">
+          
+
+  <span class="text-small text-gray">
+    
+  </span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

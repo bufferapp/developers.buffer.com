@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  Apis &ndash; Buffer API
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Buffer API">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531002">
+  </head>
+
+
+  <body>
+    <div class="off-canvas off-canvas-sidebar-show">
+
+      <div class="docs-sidebar off-canvas-sidebar">
+        <a class="docs-brand" href="https://developers.buffer.com/">
+  <h1 class="docs-brand-title">
+    Buffer API
+  </h1>
+  <small class="label text-bold">API DOCS</small>
+</a>
+
+        <nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        
+        
+          
+            <li class="menu-item">
+              <a href="/">
+                
+                <span>Overview</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/authentication/">
+                
+                <span>Authentication</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/user/">
+                
+                <span>Users</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/profiles/">
+                
+                <span>Profiles</span>
+              </a>
+            </li>
+          
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+
+      <div role="main" class="docs-content off-canvas-content">
+        
+
+<div>
+
+  <h1>Apis</h1>
+  
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/api/authentication/">
+        <div class="h2 mt-1 mb-1">Authentication</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+
+
+
+
+      <div class="float-md-right">
+        <span>0001-01-01</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    Authentication with Buffer is the first step in building your app.
+Buffer is an OAuth 2.0 provider. We recommend using one of the many great OAuth 2.0 libraries to do the heavy lifting!
+Getting Started All of the Buffer API endpoints require authentication. To get an access_token you must first register an application here. Once you have registered an app follow the steps below to gain authorized access to a users account.
+    <a class="muted-link" href="/api/authentication/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/api/user/">
+        <div class="h2 mt-1 mb-1">Users</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+
+
+
+
+      <div class="float-md-right">
+        <span>0001-01-01</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+     A user represents a single Buffer user account.
+Get /user
+Post /user/deauthorize
+GET /user Returns a single user.
+Example Request GET https://api.bufferapp.com/1/user.json { &quot;_id&quot;:&quot;4f0c0a06512f7ef214000000&quot;, &quot;activity_at&quot;:1343654640, &quot;created_at&quot;:1326189062, &quot;id&quot;:&quot;4f0c0a06512f7ef214000000&quot;, &quot;plan&quot;:&quot;free&quot;, &quot;timezone&quot;:&quot;Asia/Tel_Aviv&quot; }  POST /user/deauthorize Deauthorize your client for the user.
+Example Request POST https://api.bufferapp.com/1/user/deauthorize.json { &quot;success&quot;: true, &quot;message&quot;: &quot;Access successfully revoked!&quot; }  
+    <a class="muted-link" href="/api/user/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/api/profiles/">
+        <div class="h2 mt-1 mb-1">Profiles</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+
+
+
+
+      <div class="float-md-right">
+        <span>0001-01-01</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    A Buffer profile represents a connection to a single social media account.
+Get /profiles
+/profiles/:id
+/profiles/:id/schedules
+Post /profiles/:id/schedules/update
+GET /profiles Returns an array of social media profiles connected to a users account.
+Example Request GET https://api.bufferapp.com/1/profiles.json [ { &quot;avatar&quot; : &quot;http://a3.twimg.com/profile_images/1405180232.png&quot;, &quot;created_at&quot; : 1320703028, &quot;default&quot; : true, &quot;formatted_username&quot; : &quot;@skinnyoteam&quot;, &quot;id&quot; : &quot;4eb854340acb04e870000010&quot;, &quot;schedules&quot; : [{ &quot;days&quot; : [ &quot;mon&quot;, &quot;tue&quot;, &quot;wed&quot;, &quot;thu&quot;, &quot;fri&quot; ], &quot;times&quot; : [ &quot;12:00&quot;, &quot;17:00&quot;, &quot;18:00&quot; ] }], &quot;service&quot; : &quot;twitter&quot;, &quot;service_id&quot; : &quot;164724445&quot;, &quot;service_username&quot; : &quot;skinnyoteam&quot;, &quot;statistics&quot; : { &quot;followers&quot; : 246 }, &quot;team_members&quot; : [ &quot;4eb867340acb04e670000001&quot; ], &quot;timezone&quot; : &quot;Europe/London&quot;, &quot;user_id&quot; : &quot;4eb854340acb04e870000010&quot; }, { .
+    <a class="muted-link" href="/api/profiles/">…</a>
+  </div>
+</div>
+
+  
+
+  
+  
+
+
+
+
+</div>
+
+
+        <div class="">
+          
+
+  <span class="text-small text-gray">
+    
+  </span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

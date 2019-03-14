@@ -1,0 +1,36 @@
+<nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <li class="menu-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+              <a href="#">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+            <ul class="sub-menu">
+              {{ range .Children }}
+                <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ else }}
+            <li class="menu-item">
+              <a href="{{ .URL }}">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+
+      </ul>
+    </div>
+  </div>
+</nav>

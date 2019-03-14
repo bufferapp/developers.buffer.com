@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apis on Buffer API</title>
+    <link>https://developers.buffer.com/api/</link>
+    <description>Recent content in Apis on Buffer API</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://developers.buffer.com/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Authentication</title>
+      <link>https://developers.buffer.com/api/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.buffer.com/api/authentication/</guid>
+      <description>Authentication with Buffer is the first step in building your app.
+Buffer is an OAuth 2.0 provider. We recommend using one of the many great OAuth 2.0 libraries to do the heavy lifting!
+Getting Started All of the Buffer API endpoints require authentication. To get an access_token you must first register an application here. Once you have registered an app follow the steps below to gain authorized access to a users account.</description>
+    </item>
+    
+    <item>
+      <title>Users</title>
+      <link>https://developers.buffer.com/api/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.buffer.com/api/user/</guid>
+      <description> A user represents a single Buffer user account.
+Get /user
+Post /user/deauthorize
+GET /user Returns a single user.
+Example Request GET https://api.bufferapp.com/1/user.json { &amp;quot;_id&amp;quot;:&amp;quot;4f0c0a06512f7ef214000000&amp;quot;, &amp;quot;activity_at&amp;quot;:1343654640, &amp;quot;created_at&amp;quot;:1326189062, &amp;quot;id&amp;quot;:&amp;quot;4f0c0a06512f7ef214000000&amp;quot;, &amp;quot;plan&amp;quot;:&amp;quot;free&amp;quot;, &amp;quot;timezone&amp;quot;:&amp;quot;Asia/Tel_Aviv&amp;quot; }  POST /user/deauthorize Deauthorize your client for the user.
+Example Request POST https://api.bufferapp.com/1/user/deauthorize.json { &amp;quot;success&amp;quot;: true, &amp;quot;message&amp;quot;: &amp;quot;Access successfully revoked!&amp;quot; }  </description>
+    </item>
+    
+    <item>
+      <title>Profiles</title>
+      <link>https://developers.buffer.com/api/profiles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://developers.buffer.com/api/profiles/</guid>
+      <description>A Buffer profile represents a connection to a single social media account.
+Get /profiles
+/profiles/:id
+/profiles/:id/schedules
+Post /profiles/:id/schedules/update
+GET /profiles Returns an array of social media profiles connected to a users account.
+Example Request GET https://api.bufferapp.com/1/profiles.json [ { &amp;quot;avatar&amp;quot; : &amp;quot;http://a3.twimg.com/profile_images/1405180232.png&amp;quot;, &amp;quot;created_at&amp;quot; : 1320703028, &amp;quot;default&amp;quot; : true, &amp;quot;formatted_username&amp;quot; : &amp;quot;@skinnyoteam&amp;quot;, &amp;quot;id&amp;quot; : &amp;quot;4eb854340acb04e870000010&amp;quot;, &amp;quot;schedules&amp;quot; : [{ &amp;quot;days&amp;quot; : [ &amp;quot;mon&amp;quot;, &amp;quot;tue&amp;quot;, &amp;quot;wed&amp;quot;, &amp;quot;thu&amp;quot;, &amp;quot;fri&amp;quot; ], &amp;quot;times&amp;quot; : [ &amp;quot;12:00&amp;quot;, &amp;quot;17:00&amp;quot;, &amp;quot;18:00&amp;quot; ] }], &amp;quot;service&amp;quot; : &amp;quot;twitter&amp;quot;, &amp;quot;service_id&amp;quot; : &amp;quot;164724445&amp;quot;, &amp;quot;service_username&amp;quot; : &amp;quot;skinnyoteam&amp;quot;, &amp;quot;statistics&amp;quot; : { &amp;quot;followers&amp;quot; : 246 }, &amp;quot;team_members&amp;quot; : [ &amp;quot;4eb867340acb04e670000001&amp;quot; ], &amp;quot;timezone&amp;quot; : &amp;quot;Europe/London&amp;quot;, &amp;quot;user_id&amp;quot; : &amp;quot;4eb854340acb04e870000010&amp;quot; }, { .</description>
+    </item>
+    
+  </channel>
+</rss>

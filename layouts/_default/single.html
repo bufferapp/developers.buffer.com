@@ -1,0 +1,29 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<!-- Title -->
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">{{ .Title }}</div>
+  </div>
+  <div class="Subhead-description">
+    {{ partial "taxonomy.html" . }}
+  </div>
+</div>
+<article>
+  <section class="">
+    {{ .Content }}
+  </section>
+</article>
+{{ end }}
+
+{{ define "side" }}
+  {{ if and (gt .WordCount 0 ) (ne .Params.toc "false") }}
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>{{.Title}}</b>
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+{{ end }}

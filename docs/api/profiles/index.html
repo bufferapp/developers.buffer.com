@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  Profiles &ndash; Buffer API
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="A Buffer profile represents a connection to a single social media account.
+Get /profiles
+/profiles/:id
+/profiles/:id/schedules
+Post /profiles/:id/schedules/update
+GET /profiles Returns an array of social media profiles connected to a users account.
+Example Request GET https://api.bufferapp.com/1/profiles.json [ { &amp;quot;avatar&amp;quot; : &amp;quot;http://a3.twimg.com/profile_images/1405180232.png&amp;quot;, &amp;quot;created_at&amp;quot; : 1320703028, &amp;quot;default&amp;quot; : true, &amp;quot;formatted_username&amp;quot; : &amp;quot;@skinnyoteam&amp;quot;, &amp;quot;id&amp;quot; : &amp;quot;4eb854340acb04e870000010&amp;quot;, &amp;quot;schedules&amp;quot; : [{ &amp;quot;days&amp;quot; : [ &amp;quot;mon&amp;quot;, &amp;quot;tue&amp;quot;, &amp;quot;wed&amp;quot;, &amp;quot;thu&amp;quot;, &amp;quot;fri&amp;quot; ], &amp;quot;times&amp;quot; : [ &amp;quot;12:00&amp;quot;, &amp;quot;17:00&amp;quot;, &amp;quot;18:00&amp;quot; ] }], &amp;quot;service&amp;quot; : &amp;quot;twitter&amp;quot;, &amp;quot;service_id&amp;quot; : &amp;quot;164724445&amp;quot;, &amp;quot;service_username&amp;quot; : &amp;quot;skinnyoteam&amp;quot;, &amp;quot;statistics&amp;quot; : { &amp;quot;followers&amp;quot; : 246 }, &amp;quot;team_members&amp;quot; : [ &amp;quot;4eb867340acb04e670000001&amp;quot; ], &amp;quot;timezone&amp;quot; : &amp;quot;Europe/London&amp;quot;, &amp;quot;user_id&amp;quot; : &amp;quot;4eb854340acb04e870000010&amp;quot; }, { .|">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Buffer API">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css?v=1552531002">
+  </head>
+
+
+  <body>
+    <div class="off-canvas off-canvas-sidebar-show">
+
+      <div class="docs-sidebar off-canvas-sidebar">
+        <a class="docs-brand" href="https://developers.buffer.com/">
+  <h1 class="docs-brand-title">
+    Buffer API
+  </h1>
+  <small class="label text-bold">API DOCS</small>
+</a>
+
+        <nav class="docs-nav">
+  <div class="accordion">
+    <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" hidden="" checked="checked">
+    <label class="accordion-header c-hand" for="accordion-getting-started">API</label>
+    <div class="accordion-body">
+      <ul class="menu menu-nav">
+        
+        
+          
+            <li class="menu-item">
+              <a href="/">
+                
+                <span>Overview</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/authentication/">
+                
+                <span>Authentication</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/user/">
+                
+                <span>Users</span>
+              </a>
+            </li>
+          
+        
+          
+            <li class="menu-item">
+              <a href="/api/profiles/">
+                
+                <span>Profiles</span>
+              </a>
+            </li>
+          
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      </div>
+
+      <div role="main" class="docs-content off-canvas-content">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">Profiles</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+
+  </div>
+</div>
+<article>
+  <section class="">
+    
+
+<p>A Buffer profile represents a connection to a single social media account.</p>
+
+<h3 id="get">Get</h3>
+
+<p><a href="#get-profiles">/profiles</a></p>
+
+<p><a href="#get-profiles-id">/profiles/:id</a></p>
+
+<p><a href="#get-profiles-id-schedules">/profiles/:id/schedules</a></p>
+
+<h3 id="post">Post</h3>
+
+<p><a href="#post-profiles-id-schedules-update">/profiles/:id/schedules/update</a></p>
+
+<h3 id="get-profiles">GET /profiles</h3>
+
+<p>Returns an array of social media profiles connected to a users account.</p>
+
+<h4 id="example-request">Example Request</h4>
+
+<pre><code>GET https://api.bufferapp.com/1/profiles.json
+
+[ {
+    &quot;avatar&quot; : &quot;http://a3.twimg.com/profile_images/1405180232.png&quot;,
+    &quot;created_at&quot; :  1320703028,
+    &quot;default&quot; : true,
+    &quot;formatted_username&quot; : &quot;@skinnyoteam&quot;,
+    &quot;id&quot; : &quot;4eb854340acb04e870000010&quot;,
+    &quot;schedules&quot; : [{
+        &quot;days&quot; : [
+            &quot;mon&quot;,
+            &quot;tue&quot;,
+            &quot;wed&quot;,
+            &quot;thu&quot;,
+            &quot;fri&quot;
+        ],
+        &quot;times&quot; : [
+            &quot;12:00&quot;,
+            &quot;17:00&quot;,
+            &quot;18:00&quot;
+        ]
+    }],
+    &quot;service&quot; : &quot;twitter&quot;,
+    &quot;service_id&quot; : &quot;164724445&quot;,
+    &quot;service_username&quot; : &quot;skinnyoteam&quot;,
+    &quot;statistics&quot; : {
+        &quot;followers&quot; : 246
+    },
+    &quot;team_members&quot; : [
+        &quot;4eb867340acb04e670000001&quot;
+    ],
+    &quot;timezone&quot; : &quot;Europe/London&quot;,
+    &quot;user_id&quot; : &quot;4eb854340acb04e870000010&quot;
+  },
+  {
+	...
+  }
+]
+</code></pre>
+
+<h3 id="get-profiles-id">GET /profiles/:id</h3>
+
+<p>Returns details of the single specified social media profile.</p>
+
+<h4 id="example-request-1">Example Request</h4>
+
+<pre><code>GET https://api.bufferapp.com/1/profiles/4eb854340acb04e870000010.json
+
+{
+  &quot;avatar&quot; : &quot;http://a3.twimg.com/profile_images/1405180232.png&quot;,
+  &quot;created_at&quot; :  1320703028,
+  &quot;default&quot; : true,
+  &quot;formatted_username&quot; : &quot;@skinnyoteam&quot;,
+  &quot;id&quot; : &quot;4eb854340acb04e870000010&quot;,
+  &quot;schedules&quot; : [{
+      &quot;days&quot; : [
+          &quot;mon&quot;,
+          &quot;tue&quot;,
+          &quot;wed&quot;,
+          &quot;thu&quot;,
+          &quot;fri&quot;
+      ],
+      &quot;times&quot; : [
+          &quot;12:00&quot;,
+          &quot;17:00&quot;,
+          &quot;18:00&quot;
+      ]
+  }],
+  &quot;service&quot; : &quot;twitter&quot;,
+  &quot;service_id&quot; : &quot;164724445&quot;,
+  &quot;service_username&quot; : &quot;skinnyoteam&quot;,
+  &quot;statistics&quot; : {
+      &quot;followers&quot; : 246
+  },
+  &quot;team_members&quot; : [
+      &quot;4eb867340acb04e670000001&quot;
+  ],
+  &quot;timezone&quot; : &quot;Europe/London&quot;,
+  &quot;user_id&quot; : &quot;4eb854340acb04e870000010&quot;
+}
+</code></pre>
+
+<h3 id="get-profiles-id-schedules">GET /profiles/:id/schedules</h3>
+
+<p>Returns details of the posting schedules associated with a social media profile.</p>
+
+<h4 id="example-request-2">Example Request</h4>
+
+<pre><code>GET https://api.bufferapp.com/1/profiles/4eb854340acb04e870000010/schedules.json
+
+[{
+  &quot;days&quot; : [
+      &quot;mon&quot;,
+      &quot;tue&quot;,
+      &quot;wed&quot;,
+      &quot;thu&quot;,
+      &quot;fri&quot;
+  ],
+  &quot;times&quot; : [
+      &quot;12:00&quot;,
+      &quot;17:00&quot;,
+      &quot;18:00&quot;
+  ]
+},
+{
+  ...
+}]
+</code></pre>
+
+<h3 id="post-profiles-id-schedules-update">POST /profiles/:id/schedules/update</h3>
+
+<p>Set the posting schedules for the specified social media profile.</p>
+
+<h4 id="parameters">Parameters</h4>
+
+<ul>
+<li><code>schedules</code> (required)</li>
+<li><code>array</code></li>
+</ul>
+
+<p>Each item in the array is an individual posting schedule which consists of days and times to match the format return by the above method.</p>
+
+<h4 id="example-request-3">Example Request</h4>
+
+<pre><code>POST https://api.bufferapp.com/1/profiles/4eb854340acb04e870000010/schedules/upda
+te.json
+
+POST Data
+    schedules[0][days][]=mon&amp;
+    schedules[0][days][]=tue&amp;
+    schedules[0][days][]=thu&amp;
+    schedules[0][times][]=12:45&amp;
+    schedules[0][times][]=15:30&amp;
+    schedules[0][times][]=17:43&amp;
+
+{
+    &quot;success&quot;: true
+}
+</code></pre>
+
+  </section>
+</article>
+
+        <div class="">
+          
+
+  <span class="text-small text-gray">
+    
+  </span>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+baseURL = "https://developers.buffer.com/"
+languageCode = "en-us"
+title = "Buffer API"
+publishDir = "docs"
+[params]
+  showDate = false
