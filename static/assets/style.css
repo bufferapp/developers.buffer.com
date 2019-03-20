@@ -117,3 +117,24 @@ pre code {
     padding: 1rem;
     width: 100%
 }
+
+/* Paramter tables */
+table {
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid #f7f8f9;
+}
+table th {
+  text-align: left;
+}
+table td {
+  padding: 0.3em;
+}
+table td:first-child {
+  min-width: 200px;
+}
+table td:nth-child(2) {
+  min-width: 200px;
+}
