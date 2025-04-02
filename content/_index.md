@@ -4,7 +4,7 @@ menu = "main"
 weight = 1
 +++
 
-> We recently made some important changes to the Buffer API in regards to Twitter content in order to comply with their 2019 Developer Policy. Please visit our [Changelog page](/api/logs) for more details!
+> As of October 14th, 2019, Buffer no longer supports the registration of new developer applications. Applications created prior to this date will retain access to the Buffer Publish API. Please visit our [Changelog page](https://buffer.com/developers/api/logs) for more details.
 
 The Buffer API provides access to [user](/api/user)'s pending and sent [updates](/api/updates), social media [profiles](/api/profiles), [scheduled times](/api/profiles#schedules) and more.
 
